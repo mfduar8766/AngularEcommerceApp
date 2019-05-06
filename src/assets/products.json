@@ -1,0 +1,62 @@
+[
+  {
+    "id": 0,
+    "name": "Fender Stratocaster",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71Tdb3LehLL._SL1500_.jpg",
+    "price": 1300
+  },
+  {
+    "id": 1,
+    "name": "Gibson Explorer",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvE_J52JRBJQMyV8saI8ORlX5jQSrLEisxK94KDWN-3xBy_AYmLg",
+    "price": 1500
+  },
+  {
+    "id": 2,
+    "name": "Schecter HellRaiser",
+    "image": "https://www.schecterguitars.com/images/store/product/HELLRAISER%20C-1%20FR%20S%20BCH%20TILT.png",
+    "price": 949.00
+  },
+  {
+    "id": 3,
+    "name": "Fender Jazz Bass",
+    "image": "https://cdn.shopify.com/s/files/1/0195/7232/products/Fender-Jazz-Bass-Natural-1974-1.JPG?v=1542845728",
+    "price": 1999.99
+  },
+  {
+    "id": 4,
+    "name": "Schecter Omen 8",
+    "image": "https://www.schecterguitars.com/images/store/product/OMEN%208%20WSN%20TILT.png",
+    "price": 459.00
+  },
+  {
+    "id": 5,
+    "name": "Marshall JCM800 2203X, 1960A, and 1960B Tube Guitar Full Stack",
+    "image": "https://media.musiciansfriend.com/is/image/MMGS7/JCM800-2203X-1960A-and-1960B-Tube-Guitar-Full-Stack/482754000000000-00-290x290.jpg",
+    "price": 4249.99
+  },
+  {
+    "id": 6,
+    "name": "Peavy Vyper 30 Watt",
+    "image": "https://images.reverb.com/image/upload/s--efQnY8HC--/a_exif,c_limit,e_unsharp_mask:80,f_auto,fl_progressive,g_south,h_620,q_90,w_620/v1502671596/mshuqwqnb2byavudjbik.jpg",
+    "price": 549.99
+  },
+  {
+    "id": 7,
+    "name": "Ibanez GSRM20BWNF miKro - Walnut Flat ",
+    "image": "https://media.sweetwater.com/api/i/q-82__ha-497476325d01ea82__hmac-ac2249f2e1b2f63bf87b2b331a518fdb8664c965/images/items/750/GSRM20BWNF-large.jpg",
+    "price": 179.99
+  },
+  {
+    "id": 8,
+    "name": "Fender Stratocaster",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71Tdb3LehLL._SL1500_.jpg",
+    "price": 1300
+  },
+  {
+    "id": 9,
+    "name": "Fender Stratocaster",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71Tdb3LehLL._SL1500_.jpg",
+    "price": 1300
+  }
+]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IProducts } from 'src/app/Models/products-interface';
+import { ProductsService } from 'src/app/Services/products-service.service';
 
 @Component({
   selector: 'app-products-page',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsPageComponent implements OnInit {
 
-  constructor() { }
+  public products: IProducts[];
+
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit() {
+    this.productsService.getProducts().subscribe(product => {
+      this.products = product;
+    });
   }
 
 }

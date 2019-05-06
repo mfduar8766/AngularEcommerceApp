@@ -1,3 +1,8 @@
-<p>
-  cart-page works!
-</p>
+<div class="products-card">
+    <div>
+        <img class="images" [src]="product.image" />
+    </div>
+    <div>
+      <p>{{product.price | currency}}</p>
+    </div>
+</div>
