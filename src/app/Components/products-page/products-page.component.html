@@ -1,3 +1,6 @@
-<p>
-  products-page works!
-</p>
+<div class="card-container">
+  <app-cart-page
+    *ngFor="let product of products"
+    [product]="product"
+  ></app-cart-page>
+</div>

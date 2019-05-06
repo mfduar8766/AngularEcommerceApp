@@ -9,6 +9,7 @@ import { CheckoutPageComponent } from './Components/checkout-page/checkout-page.
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -37,6 +38,7 @@ import { ServicesPageComponent } from './Components/services-page/services-page.
     MatMenuModule,
     MatListModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
