@@ -1,0 +1,46 @@
+<div
+  class="product-details"
+  *ngFor="let product of productDetails"
+  class="product-details"
+>
+  <div class="producut-title-container">
+    <div>
+      <h1>{{ product.name }}</h1>
+      <div class="product-sub-title">
+        <p class="seperate">item Number: {{ product.itemNumber }}</p>
+        <p class="reviews seperate">6 Reviews |</p>
+        <p class="reviews">Write a Review |</p>
+        <p class="reviews">Uestions and Answers</p>
+      </div>
+    </div>
+    <div>
+      <img style="width: 30%; height: 30%;" [src]="product.image" />
+    </div>
+  </div>
+  <div class="product-description-container">
+    <div class="product-description">
+      <h2>Product Description</h2>
+      <p>{{ getFirstHalfOfDesciption() }}</p>
+      <p
+        (click)="setShowDescription()"
+        style="color: red; text-decoration: underline; cursor: pointer;"
+      >
+        View More
+      </p>
+      <p *ngIf="showDescription === true; else blank">
+        {{ getSecondHalfOfDescription() }}
+      </p>
+      <ng-template #blank>
+        <p></p>
+      </ng-template>
+      <hr style="background: #d3d3d3;" />
+    </div>
+    <div class="order-now">
+      <p style="padding: 1rem; border: 1px solid #d3d3d3; width: 50%;">
+        Have Questions? 855-770-3373 Call our experts for product info and
+        phone-only specials. Or click here to chat now.
+      </p>
+      <app-add-to-cart [product]="product"></app-add-to-cart>
+    </div>
+  </div>
+</div>

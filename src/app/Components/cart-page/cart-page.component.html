@@ -1,7 +1,15 @@
-<div class=card-container>
+<div class="card-container">
   <mat-card class="card">
-    <img mat-card-image class="images" [src]="product.image" />
-    <mat-card-title class="card-title">{{ product.name }}</mat-card-title>
-    <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
+    <mat-card-content>
+      <a [routerLink]="['products', product.id]"
+        ><img mat-card-image class="images" [src]="product.image"
+      /></a>
+      <a [routerLink]="['products', product.id]">
+        <mat-card-title class="card-title">{{ product.name }}</mat-card-title>
+      </a>
+      <mat-card-subtitle style="color: red; font-size: 20px;">{{
+        product.price | currency
+      }}</mat-card-subtitle>
+    </mat-card-content>
   </mat-card>
 </div>

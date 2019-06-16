@@ -18,5 +18,4 @@ export class ProductsPageComponent implements OnInit {
       this.products = product;
     });
   }
-
 }
