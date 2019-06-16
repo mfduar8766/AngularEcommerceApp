@@ -3,4 +3,6 @@ export interface IProducts {
   name: string;
   image: string;
   price: number;
+  itemNumber: string;
+  description: string;
 }

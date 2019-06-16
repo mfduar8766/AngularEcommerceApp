@@ -1,0 +1,10 @@
+.order-now-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #d3d3d3;
+  border: 1px solid #d3d3d3;
+  height: 50%;
+  width: 50%;
+  padding: 0.5rem;
+}
