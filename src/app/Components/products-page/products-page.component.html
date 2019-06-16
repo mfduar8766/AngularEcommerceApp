@@ -1,6 +1,7 @@
-<div class="card-container">
-  <app-cart-page
-    *ngFor="let product of products"
-    [product]="product"
-  ></app-cart-page>
-</div>
+<mat-grid-list class="grid-list" cols="4" rowHeight="1:1">
+  <mat-grid-tile *ngFor="let product of products">
+    <div class="card-container">
+      <app-cart-page :key="product.id" [product]="product"></app-cart-page>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
