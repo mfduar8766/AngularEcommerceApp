@@ -1,8 +1,7 @@
-<div class="products-card">
-    <div>
-        <img class="images" [src]="product.image" />
-    </div>
-    <div>
-      <p>{{product.price | currency}}</p>
-    </div>
+<div class=card-container>
+  <mat-card class="card">
+    <img mat-card-image class="images" [src]="product.image" />
+    <mat-card-title class="card-title">{{ product.name }}</mat-card-title>
+    <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
+  </mat-card>
 </div>

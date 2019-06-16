@@ -1,8 +1,16 @@
-.products-card {
+.card {
+  text-align: center;
+  width: 100%;
+}
+
+.card-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
   height: 100%;
   width: 100%;
+}
+
+.card-title {
+  font-size: 16px;
 }

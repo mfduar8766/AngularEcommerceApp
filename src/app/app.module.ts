@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,9 +9,6 @@ import { ProductsPageComponent } from './Components/products-page/products-page.
 import { CartPageComponent } from './Components/cart-page/cart-page.component';
 import { CheckoutPageComponent } from './Components/checkout-page/checkout-page.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
