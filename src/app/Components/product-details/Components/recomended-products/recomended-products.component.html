@@ -1,0 +1,26 @@
+<div class="offetn-purchased">
+  <h2>Often Purchased Together</h2>
+  <div class="flex-container-row">
+    <div
+      *ngFor="let recomened of recomendedProductsData"
+      class="flex-container-row"
+    >
+      <div class="flex-container-row">
+        <div>
+          <img class="image" [src]="recomened.image" />
+        </div>
+        <div class="flex-column-row">
+          <h3>{{ recomened.name }}</h3>
+          <div class="flex-container-row">
+            <p style="color: red; margin-right: 1rem;">
+              {{ recomened.price | currency }}
+            </p>
+            <button style="color: white; background: red;" class="button">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

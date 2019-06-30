@@ -1,46 +1,40 @@
-<div
-  class="product-details"
-  *ngFor="let product of productDetails"
-  class="product-details"
->
-  <div class="producut-title-container">
-    <div>
+<div class="container" *ngFor="let product of productDetails">
+  <div class="product-details">
+    <div class="producut-title-container">
       <h1>{{ product.name }}</h1>
       <div class="product-sub-title">
         <p class="seperate">item Number: {{ product.itemNumber }}</p>
-        <p class="reviews seperate">6 Reviews |</p>
-        <p class="reviews">Write a Review |</p>
-        <p class="reviews">Uestions and Answers</p>
+        <a href="#" class="reviews seperate">6 Reviews</a>
+        <span class="title-seperator">|</span>
+        <a href="#" class="reviews">Write a Review</a>
+        <span class="title-seperator">|</span>
+        <a href="#" class="reviews">Questions and Answers</a>
       </div>
     </div>
-    <div>
-      <img style="width: 30%; height: 30%;" [src]="product.image" />
-    </div>
   </div>
-  <div class="product-description-container">
-    <div class="product-description">
-      <h2>Product Description</h2>
-      <p>{{ getFirstHalfOfDesciption() }}</p>
-      <p
-        (click)="setShowDescription()"
-        style="color: red; text-decoration: underline; cursor: pointer;"
-      >
-        View More
-      </p>
-      <p *ngIf="showDescription === true; else blank">
-        {{ getSecondHalfOfDescription() }}
-      </p>
-      <ng-template #blank>
-        <p></p>
-      </ng-template>
-      <hr style="background: #d3d3d3;" />
-    </div>
-    <div class="order-now">
-      <p style="padding: 1rem; border: 1px solid #d3d3d3; width: 50%;">
-        Have Questions? 855-770-3373 Call our experts for product info and
-        phone-only specials. Or click here to chat now.
-      </p>
-      <app-add-to-cart [product]="product"></app-add-to-cart>
+
+  <app-product-description [product]="product"></app-product-description>
+
+  <app-recomended-products
+    [recomendedProductsData]="recomendedProductsData"
+  ></app-recomended-products>
+
+  <div class="more-information">
+    <p>
+      Over the decades, players have been continually inspired by the sound of a
+      Strat. From the clarity of the high end, through the gut punch of the mids
+      and the solid lows, it's a sound that's helped define what an electric
+      guitar should be—versatile enough for any style and broad enough for any
+      player to find an individual voice. This Player Series Stratocaster puts
+      all of the classic features of the Strat at your fingertips while adding a
+      modern edge, including a modern neck profile, medium-jumbo frets and a
+      freshly redesigned 2-point fulcrum vibrato bridge. With a beautiful gloss
+      finish over a solid alder body, a 22-fret pau ferro fingerboard with a
+      contemporary 9.5" radius for easy bending, the Player Series Stratocaster
+      is primed and ready to carry you along your musical voyage.
+    </p>
+    <div>
+      <app-product-features [product]="product"></app-product-features>
     </div>
   </div>
 </div>

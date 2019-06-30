@@ -1,0 +1,66 @@
+<div class="grid-container">
+  <div class="page-body">
+    <div>
+      <img class="image" [src]="product.image" />
+    </div>
+
+    <div class="product-description-container">
+      <div class="product-description">
+        <h2>Product Description</h2>
+        <p>{{ getFirstHalfOfDesciption() }}</p>
+        <p
+          (click)="showDescription = !showDescription"
+          style="color: red; text-decoration: underline; cursor: pointer;"
+        >
+          Click To Read More About This Product.
+        </p>
+        <p *ngIf="showDescription === true; else hideDescription">
+          {{ getSecondHalfOfDescription() }}
+        </p>
+        <ng-template #hideDescription>
+          <p></p>
+        </ng-template>
+        <hr style="background: #d3d3d3;" />
+        <div>
+          <h3>In stock and ready to ship.</h3>
+          <h3>Choose Style:</h3>
+          <div class="choose-style">
+            <div class="img-container">
+              <img style="width: 100%;" [src]="product.image" />{{
+                product.price | currency
+              }}
+            </div>
+            <div class="img-container">
+              <img style="width: 100%;" [src]="product.image" />{{
+                product.price | currency
+              }}
+            </div>
+            <div class="img-container">
+              <img style="width: 100%;" [src]="product.image" />{{
+                product.price | currency
+              }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checkout-component">
+      <div style="width: 50%;" class="center-content">
+        <p style="border: 1px solid gray;">
+          Have Questions? 888-553-1105 Call our experts for product info and
+          phone-only specials. <a href="#"> Or click here to chat now</a>
+        </p>
+      </div>
+      <div class="center-content">
+        <app-add-to-cart [product]="product"></app-add-to-cart>
+      </div>
+      <div style="width: 50%;" class="center-content">
+        <p style="border: 1px solid gray;">
+          Free Store Pick Up: Available Today Location: Jacksonville, FL View
+          More Stores For Availability
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -11,3 +11,25 @@ body {
   height: 100%;
   background-size: cover;
 }
+
+.image {
+  width: 100%;
+}
+
+.flex-container-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center
+}
+
+.button {
+  padding: 0.5rem;
+  cursor: pointer;
+}

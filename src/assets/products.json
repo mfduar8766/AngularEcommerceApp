@@ -5,7 +5,20 @@
     "image": "https://images-na.ssl-images-amazon.com/images/I/71Tdb3LehLL._SL1500_.jpg",
     "price": 1300,
     "itemNumber": "1500000000024736",
-    "description": "Often copied, but never surpassed, the Stratocaster is arguably the world’s most-loved electric guitar. Electrifying the music world since its release in 1954, its natural, versatile sound made the Stratocaster the benchmark for exceptional guitar tones. The American Professional Stratocaster HSS ShawBucker isn’t a re-imagining of the classic design; it’s the authentic original model, evolved. The fat-sounding ShawBucker humbucking bridge pickup is joined by tone wizard Tim Shaws latest vintage-informed design—the V-Mod single-coil pickups. These brand-new pickups are voiced specifically for each position, mixing alnico magnet types to produce powerful, nuanced tones with original Fender sonic DNA. Retain high end clarity when adjusting the volume controls, thanks to the new treble-bleed tone circuit that lets your tone shine through in all its glory. The new modern “Deep C”-shaped neck profile feels just right in your hand while the narrow-tall frets make it easy to bend strings accurately and play perfectly intonated chords.The best of yesterday and today, the American Professional Stratocaster HSS Shawbucker is the latest form of electric inspiration from Fender. Step up and stake your claim to a legend. Elite molded case included."
+    "description": "Often copied, but never surpassed, the Stratocaster is arguably the world’s most-loved electric guitar. Electrifying the music world since its release in 1954, its natural, versatile sound made the Stratocaster the benchmark for exceptional guitar tones. The American Professional Stratocaster HSS ShawBucker isn’t a re-imagining of the classic design; it’s the authentic original model, evolved. The fat-sounding ShawBucker humbucking bridge pickup is joined by tone wizard Tim Shaws latest vintage-informed design—the V-Mod single-coil pickups. These brand-new pickups are voiced specifically for each position, mixing alnico magnet types to produce powerful, nuanced tones with original Fender sonic DNA. Retain high end clarity when adjusting the volume controls, thanks to the new treble-bleed tone circuit that lets your tone shine through in all its glory. The new modern “Deep C”-shaped neck profile feels just right in your hand while the narrow-tall frets make it easy to bend strings accurately and play perfectly intonated chords.The best of yesterday and today, the American Professional Stratocaster HSS Shawbucker is the latest form of electric inspiration from Fender. Step up and stake your claim to a legend. Elite molded case included.",
+    "features": [
+      "Gloss-finish solid alder body.",
+      "25.5\"-scale bolt-on maple neck with 22-fret, 9.5\"-radius maple fingerboard.",
+      "2-point fulcrum tremolo bridge with vintage-style bent steel saddles, sealed, die-cast tuners."
+    ],
+    "body": [
+      "Body shape: Double cutaway.",
+      "Body type: Solid body.",
+      "Body material: Solid wood.",
+      "Body wood: Alder.",
+      "Body finish: Gloss.",
+      "Orientation: Right-handed."
+    ]
   },
   {
     "id": 1,
@@ -18,7 +31,7 @@
     "id": 2,
     "name": "Schecter HellRaiser",
     "image": "https://www.schecterguitars.com/images/store/product/HELLRAISER%20C-1%20FR%20S%20BCH%20TILT.png",
-    "price": 949.00,
+    "price": 949.0,
     "itemNumber": "1500000000024734"
   },
   {
@@ -32,7 +45,7 @@
     "id": 4,
     "name": "Schecter Omen 8",
     "image": "https://www.schecterguitars.com/images/store/product/OMEN%208%20WSN%20TILT.png",
-    "price": 459.00,
+    "price": 459.0,
     "itemNumber": "1500000000024732"
   },
   {

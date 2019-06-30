@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "name": "Proline HT1010 Guitar Stand Black",
+    "price": 19.99,
+    "image": "../assets/img/stand.jpg"
+  },
+  {
+    "id": 1,
+    "name": "Fender Champion 100 Guitar Combo Amp Black",
+    "price": 379.99,
+    "image": "../assets/img/amp.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Snark Super Snark 2 Clip-On Tuner Black",
+    "price": 29.99,
+    "image": "../assets/img/tuner.jpg"
+  }
+]
