@@ -5,4 +5,6 @@ export interface IProducts {
   price: number;
   itemNumber: string;
   description: string;
+  features: string[];
+  body: string[];
 }
