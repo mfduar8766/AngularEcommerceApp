@@ -1,28 +1,75 @@
-<div>
-  <h3 style="text-align: left;">Price:</h3>
-  <div class="chekout-container">
-    <div>
-      <h3>
-        <strong>{{ product.price | currency }}</strong>
-      </h3>
-    </div>
-    <div
-      style="display: flex; justify-content: space-between; align-items: center;"
+<div class="chekout-container">
+  <h3>
+    <strong> Price: {{ product.price | currency }}</strong>
+  </h3>
+
+  <div class="flex-container-column">
+    <form
+      #addToCartForm="ngForm"
+      class="flex-container-row"
+      novalidate
+      (ngSubmit)="addToCart(addToCartForm)"
     >
-      <div>
-        <select style="margin-right: 1rem; width: 50px;" name="item-quantity">
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
-        </select>
-      </div>
-      <div>
+      <input
+        #quantity="ngModel"
+        required
+        name="productQuantity"
+        [(ngModel)]="productQuantity"
+        class="item-quantity"
+      />
+      <div class="button-container">
         <button
-          style="padding: 1rem; color: white; font-size: 20px; background: red;"
-        >
-          Add To Cart
-        </button>
+          (click)="incrementQuantitySelected()"
+          class="select-button fa fa-chevron-up"
+        ></button>
+        <button
+          (click)="decrementQuantitySelected()"
+          class="select-button fa fa-chevron-down"
+        ></button>
       </div>
-    </div>
+      <button
+        [disabled]="
+          !quantity.valid ||
+          ((quantity.touched && selectedStyle === '') ||
+            isThereAnError === true)
+        "
+        [ngClass]="{
+          'is-disabled':
+            !quantity.valid ||
+            ((quantity.touched && selectedStyle === '') ||
+              isThereAnError === true)
+        }"
+        type="submit"
+        class="add-to-cart"
+        (click)="isStyleSelected($event, quantity.untouched)"
+      >
+        Add To Cart
+      </button>
+    </form>
+    <span *ngIf="quantity.invalid; else notSelected" class="error-message">
+      {{ setErrorMessage }}
+    </span>
+    <ng-template #notSelected>
+      <span
+        class="error-message"
+        *ngIf="quantity.invalid || (quantity.touched && selectedStyle === '')"
+      >
+        Please select a style before adding to cart.
+      </span>
+    </ng-template>
   </div>
 </div>
+
+<!--
+  ng-touched: you have to navigate away from form control for the value to change to ng-untouched
+  ng-pristinr: value of form HAS NOT changed; ng-dirty: value HAS changed
+  ng-valid: if form value IS VALID ng-valid is applied else ng-invalid is applied
+ -->
+<!--       *ngIf="quantity.value === 0 || quantity.pristine"
+ -->
+
+<!--  (click)="
+          addToCartForm.untouched === true && selectedStyle === ''
+            ? $event.preventDefault()
+            : null
+        " -->
