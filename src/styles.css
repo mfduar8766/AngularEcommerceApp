@@ -33,3 +33,12 @@ body {
   padding: 0.5rem;
   cursor: pointer;
 }
+
+.horizontal-line {
+  background: #d3d3d3;
+}
+
+.error-message {
+  color: red;
+  font-size: 15px;
+}

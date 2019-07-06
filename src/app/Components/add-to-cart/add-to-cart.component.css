@@ -8,3 +8,51 @@
   background: #d3d3d3;
   padding: 1rem;
 }
+
+.item-quantity-selection {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.item-quantity {
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+  background: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.select-button {
+  height: 30px;
+  color: white;
+  padding: 0.5rem;
+  background: black;
+  cursor: pointer;
+  text-align: center;
+}
+
+.add-to-cart {
+  cursor: pointer;
+  padding: 1rem;
+  color: white;
+  font-size: 20px;
+  background: red;
+}
+
+.is-disabled {
+  cursor: pointer;
+  padding: 1rem;
+  color: white;
+  font-size: 20px;
+  background: rgb(177, 173, 173);
+}

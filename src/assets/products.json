@@ -4,6 +4,7 @@
     "name": "Fender Stratocaster",
     "image": "https://images-na.ssl-images-amazon.com/images/I/71Tdb3LehLL._SL1500_.jpg",
     "price": 1300,
+    "inStock":true,
     "itemNumber": "1500000000024736",
     "description": "Often copied, but never surpassed, the Stratocaster is arguably the world’s most-loved electric guitar. Electrifying the music world since its release in 1954, its natural, versatile sound made the Stratocaster the benchmark for exceptional guitar tones. The American Professional Stratocaster HSS ShawBucker isn’t a re-imagining of the classic design; it’s the authentic original model, evolved. The fat-sounding ShawBucker humbucking bridge pickup is joined by tone wizard Tim Shaws latest vintage-informed design—the V-Mod single-coil pickups. These brand-new pickups are voiced specifically for each position, mixing alnico magnet types to produce powerful, nuanced tones with original Fender sonic DNA. Retain high end clarity when adjusting the volume controls, thanks to the new treble-bleed tone circuit that lets your tone shine through in all its glory. The new modern “Deep C”-shaped neck profile feels just right in your hand while the narrow-tall frets make it easy to bend strings accurately and play perfectly intonated chords.The best of yesterday and today, the American Professional Stratocaster HSS Shawbucker is the latest form of electric inspiration from Fender. Step up and stake your claim to a legend. Elite molded case included.",
     "features": [
@@ -18,6 +19,23 @@
       "Body wood: Alder.",
       "Body finish: Gloss.",
       "Orientation: Right-handed."
+    ],
+    "styles": [
+      {
+        "id":0,
+        "color": "Polar White",
+        "image": "../assets/img/polarwhite.jpg"
+      },
+      {
+        "id": 1,
+        "color": "Tide Pool",
+        "image": "../assets/img/tidepool.jpg"
+      },
+      {
+        "id": 2,
+        "color": "3 Color - Sunburst",
+        "image": "../assets/img/sunburst.jpg"
+      }
     ]
   },
   {
