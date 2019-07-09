@@ -1,27 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { SelectedProductService } from "../product-details/Modals/selected-product.service";
 
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  selector: "app-nav-bar",
+  templateUrl: "./nav-bar.component.html",
+  styleUrls: ["./nav-bar.component.css"]
 })
 export class NavBarComponent implements OnInit {
-  constructor(private router: Router) { }
+  public totalItems: number = 0;
+  constructor(
+    private router: Router,
+    private selectedProduct: SelectedProductService
+  ) {}
+
+  ngOnInit() {
+    this.selectedProduct.selectedProduct$.subscribe(data => {
+      const myArray = [];
+      myArray.push(data);
+      this.totalItems = myArray.length;
+    });
+  }
 
   goToHomePage() {
-    this.router.navigate(['']);
+    this.router.navigate([""]);
   }
 
   goToCart() {
-    this.router.navigate(['products/cart']);
+    this.router.navigate(["checkout"]);
   }
 
   goToServices() {
-    this.router.navigate(['services']);
+    this.router.navigate(["services"]);
   }
-
-  ngOnInit() {
-  }
-
 }

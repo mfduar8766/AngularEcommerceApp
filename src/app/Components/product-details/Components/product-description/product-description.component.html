@@ -14,22 +14,30 @@
         >
           Click To Read More About This Product.
         </p>
+        <div *ngIf="selectedStyle">
+          <h3 class="selected-product">In Stock and Ready To Ship</h3>
+        </div>
         <p *ngIf="showDescription === true; else hideDescription">
           {{ getSecondHalfOfDescription() }}
         </p>
-        <ng-template #hideDescription>
-          <p></p>
-        </ng-template>
+        <ng-template #hideDescription></ng-template>
 
         <div class="flex-container-column">
           <div style="display: flex; margin-bottom: 1rem;">
             <strong>Choose Style:</strong>
             <span style="margin-left: 0.5rem;">
               {{ selectedProduct }}
-              <span *ngIf="selectedProduct" style="color: green;"
+              <span
+                *ngIf="selectedProduct; else selected"
+                class="selected-product"
                 >In Stock</span
               >
             </span>
+            <ng-template #selected>
+              <span class="selected-product" *ngIf="selectedStyle">{{
+                selectedStyle
+              }}</span>
+            </ng-template>
           </div>
           <span class="error-message" *ngIf="errorMessage !== ''">{{
             errorMessage
@@ -51,7 +59,6 @@
                   style="width: 100%;"
                   [src]="style.image"
                 />
-                {{ product.price | currency }}
               </div>
             </div>
           </div>
@@ -62,7 +69,7 @@
     <div class="checkout-component">
       <div class="center-content">
         <p style="border: 1px solid gray;">
-          Have Questions? 888-553-1105 Call our experts for product info and
+          Have Questions 888-553-1105 Call our experts for product info and
           phone-only specials. <a href="#"> Or click here to chat now</a>
         </p>
       </div>

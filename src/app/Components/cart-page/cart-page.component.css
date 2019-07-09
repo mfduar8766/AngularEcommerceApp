@@ -1,14 +1,8 @@
 .card {
   text-align: center;
   width: 100%;
-}
-
-.card-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+  height: auto;
+  box-sizing: border-box;
 }
 
 .card-title {

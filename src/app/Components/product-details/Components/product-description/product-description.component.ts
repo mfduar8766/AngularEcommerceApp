@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { IProducts } from "src/app/Models/products-interface";
+import { IProducts, IProductStyle } from "src/app/Models/products-interface";
 
 @Component({
   selector: "app-product-description",
@@ -8,7 +8,7 @@ import { IProducts } from "src/app/Models/products-interface";
 })
 export class ProductDescriptionComponent implements OnInit {
   @Input() product: IProducts;
-  @Input() productStyles: [{ id: number; color: string; image: string }];
+  @Input() productStyles: IProductStyle[];
 
   public firstHalfOfProductDescription: string;
   public secondHalfOfProductDescription: string;

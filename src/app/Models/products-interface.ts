@@ -16,3 +16,17 @@ export interface IProducts {
     }
   ];
 }
+
+export interface IProductStyle {
+  id: number;
+  color: string;
+  image: string;
+}
+
+export interface IProductDetails {
+  id: number;
+  itemNumber: string;
+  name: string;
+  price: number;
+  style: string;
+}

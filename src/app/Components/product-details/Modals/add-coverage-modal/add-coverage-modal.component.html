@@ -1,0 +1,33 @@
+<div class="flex-container-column">
+  <div class="flex-container-row">
+    <h1 mat-dialog-title>Add Pro Coverage</h1>
+    <span (click)="closeModal()" class="close-modal fa fa-times"> </span>
+  </div>
+  <mat-dialog-content class="coverage-plan">
+    <div class="coverage-options">
+      <h2>12 Months</h2>
+      <span class="fa fa-shield fa-4x" aria-hidden="true"></span>
+      $99.99
+    </div>
+    <div class="coverage-options">
+      <h2>24 Months</h2>
+      <span class="fa fa-shield fa-4x" aria-hidden="true"></span>
+      $199.99
+    </div>
+    <div class="coverage-options">
+      <h2>36 Months</h2>
+      <span class="fa fa-shield fa-4x" aria-hidden="true"></span>
+      $299.99
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions class="flex-container-row">
+    <button
+      (click)="closeModal()"
+      style="padding: 0.5rem; cursor: pointer;"
+      class="mat-raised-button"
+    >
+      No Thanks
+    </button>
+    <button style="padding: 0.5rem;" class="add-to-cart">Add To Cart</button>
+  </mat-dialog-actions>
+</div>
