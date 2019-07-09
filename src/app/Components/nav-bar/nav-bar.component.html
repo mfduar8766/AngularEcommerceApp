@@ -1,7 +1,16 @@
-<mat-toolbar>
-  <mat-nav-list class="toolBar">
-    <a mat-list-item (click)="goToHomePage()">Home</a>
-    <a mat-list-item (click)="goToCart()">Cart</a>
-    <a mat-list-item (click)="goToServices()">Services</a>
-  </mat-nav-list>
-</mat-toolbar>
+<nav class="nav-bar">
+  <ul class="nav-list">
+    <li class="nav-link">
+      <a (click)="goToHomePage()">Home</a>
+    </li>
+    <li class="nav-link">
+      <a (click)="goToServices()">Services</a>
+    </li>
+    <li class="nav-link">
+      <a (click)="goToCart()" class="fa fa-cart-plus">
+        Cart ({{ totalItems }})
+        <span class="fa fa-caret-down"></span>
+      </a>
+    </li>
+  </ul>
+</nav>

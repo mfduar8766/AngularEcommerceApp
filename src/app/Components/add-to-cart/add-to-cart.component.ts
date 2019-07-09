@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { IProducts } from "src/app/Models/products-interface";
+import { IProducts, IProductDetails } from "src/app/Models/products-interface";
 import { NgForm } from "@angular/forms";
+import { MatDialog, MatDialogConfig } from "@angular/material";
+import { AddCoverageModalComponent } from "../product-details/Modals/add-coverage-modal/add-coverage-modal.component";
 
 @Component({
   selector: "app-add-to-cart",
@@ -16,7 +18,7 @@ export class AddToCartComponent implements OnInit {
   public isThereAnError: boolean = false;
   public setErrorMessage: string = " Please choose a quantity.";
 
-  constructor() {}
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit() {}
 
@@ -45,6 +47,30 @@ export class AddToCartComponent implements OnInit {
     this.errorMessage.emit("");
   }
 
+  openModal(product: IProductDetails[]) {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.height = "500px";
+    dialogConfig.width = "600px";
+    dialogConfig.autoFocus = true;
+    dialogConfig.data = product;
+    const dialogRef = this.dialog.open(AddCoverageModalComponent, dialogConfig);
+    dialogRef.afterClosed().subscribe(data => data);
+  }
+
+  createProduct() {
+    const { name, price, itemNumber, id } = this.product;
+    const chosenProduct: IProductDetails[] = [
+      {
+        id,
+        itemNumber,
+        name,
+        price,
+        style: this.selectedStyle !== "" ? this.selectedStyle : null
+      }
+    ];
+    return chosenProduct;
+  }
+
   addToCart(value: NgForm) {
     if (this.selectedStyle === "") {
       this.isThereAnError = true;
@@ -53,6 +79,8 @@ export class AddToCartComponent implements OnInit {
     } else if (this.selectedStyle !== "") {
       this.isThereAnError = false;
       this.errorMessage.emit("");
+      const product = this.createProduct();
+      this.openModal(product);
     }
   }
 }

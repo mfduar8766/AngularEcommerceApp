@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ProductsService } from "src/app/Services/products-service.service";
-import { IProducts } from "src/app/Models/products-interface";
+import { IProducts, IProductStyle } from "src/app/Models/products-interface";
 import { ActivatedRoute } from "@angular/router";
 import { RecomendedProductsService } from "src/app/Services/recomended-products.service";
 import { IRecomededProducts } from "src/app/Models/recomendedProducts-interface";
@@ -13,7 +13,7 @@ import { IRecomededProducts } from "src/app/Models/recomendedProducts-interface"
 export class ProductDetailsComponent implements OnInit {
   public productDetails: IProducts[];
   public recomendedProductsData: IRecomededProducts[];
-  public productStyles: [{ id: number; color: string; image: string }];
+  public productStyles: IProductStyle[];
 
   constructor(
     private productsService: ProductsService,
@@ -39,7 +39,9 @@ export class ProductDetailsComponent implements OnInit {
         }
       });
       this.productDetails = filterProducts;
-      this.productStyles = filterProducts[0].styles;
+      if (this.productDetails && this.productDetails.length) {
+        this.productStyles = this.productDetails[0].styles || [];
+      }
     });
   }
 }

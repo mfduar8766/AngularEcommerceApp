@@ -42,3 +42,11 @@ body {
   color: red;
   font-size: 15px;
 }
+
+.add-to-cart {
+  cursor: pointer;
+  padding: 1rem;
+  color: white;
+  font-size: 20px;
+  background: red;
+}

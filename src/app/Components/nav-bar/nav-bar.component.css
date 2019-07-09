@@ -1,8 +1,20 @@
-.toolBar {
+.nav-bar {
+  height: 2rem;
+  background: #d3d3d3;
+  margin: 1rem;
+  box-sizing: border-box;
+}
+
+.nav-list {
   display:flex;
-  flex-direction:row;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   height: 100%;
   width: 100%;
   text-align: center;
+}
+
+.nav-link {
+  list-style-type: none;
+  cursor: pointer;
 }
