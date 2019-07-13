@@ -1,10 +1,10 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { IProducts, IProductStyle } from "src/app/Models/products-interface";
+import { Component, OnInit, Input } from '@angular/core';
+import { IProducts, IProductStyle } from 'src/app/Models/products-interface';
 
 @Component({
-  selector: "app-product-description",
-  templateUrl: "./product-description.component.html",
-  styleUrls: ["./product-description.component.css"]
+  selector: 'app-product-description',
+  templateUrl: './product-description.component.html',
+  styleUrls: ['./product-description.component.css']
 })
 export class ProductDescriptionComponent implements OnInit {
   @Input() product: IProducts;
@@ -13,9 +13,9 @@ export class ProductDescriptionComponent implements OnInit {
   public firstHalfOfProductDescription: string;
   public secondHalfOfProductDescription: string;
   public showDescription: boolean = false;
-  public selectedProduct: string = "";
-  public errorMessage: string = "";
-  public selectedStyle: string = "";
+  public selectedProduct: string = '';
+  public errorMessage: string = '';
+  public selectedStyle: string = '';
 
   constructor() {}
 
@@ -34,16 +34,16 @@ export class ProductDescriptionComponent implements OnInit {
   }
 
   setImageContainerClass(event: Event, productColor: string) {
-    if (event.type === "mouseover") {
+    if (event.type === 'mouseover') {
       this.selectedProduct = productColor;
       const classes = {
-        "img-container:hover": productColor
+        'img-container:hover': productColor
       };
       return classes;
-    } else if (event.type === "mouseout") {
-      this.selectedProduct = "";
+    } else if (event.type === 'mouseout') {
+      this.selectedProduct = '';
       const classes = {
-        "img-container": productColor
+        'img-container': productColor
       };
       return classes;
     }
@@ -54,7 +54,7 @@ export class ProductDescriptionComponent implements OnInit {
   }
 
   setProductStyle(event: Event, style: string) {
-    if (event.type === "click") {
+    if (event.type === 'click') {
       return (this.selectedStyle = style);
     }
   }

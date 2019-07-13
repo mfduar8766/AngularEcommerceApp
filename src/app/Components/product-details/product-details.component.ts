@@ -1,14 +1,14 @@
-import { Component, OnInit } from "@angular/core";
-import { ProductsService } from "src/app/Services/products-service.service";
-import { IProducts, IProductStyle } from "src/app/Models/products-interface";
-import { ActivatedRoute } from "@angular/router";
-import { RecomendedProductsService } from "src/app/Services/recomended-products.service";
-import { IRecomededProducts } from "src/app/Models/recomendedProducts-interface";
+import { Component, OnInit } from '@angular/core';
+import { ProductsService } from 'src/app/Services/products-service.service';
+import { IProducts, IProductStyle } from 'src/app/Models/products-interface';
+import { ActivatedRoute } from '@angular/router';
+import { RecomendedProductsService } from 'src/app/Services/recomended-products.service';
+import { IRecomededProducts } from 'src/app/Models/recomendedProducts-interface';
 
 @Component({
-  selector: "app-product-details",
-  templateUrl: "./product-details.component.html",
-  styleUrls: ["./product-details.component.css"]
+  selector: 'app-product-details',
+  templateUrl: './product-details.component.html',
+  styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
   public productDetails: IProducts[];

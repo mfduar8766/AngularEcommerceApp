@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { IProducts } from 'src/app/Models/products-interface';
 
 @Component({
-  selector: "app-product-features",
+  selector: 'app-product-features',
   template: `
     <div class="features-container">
       <h1>Features</h1>
@@ -15,7 +15,7 @@ import { IProducts } from 'src/app/Models/products-interface';
       </ul>
     </div>
   `,
-  styleUrls: ["./product-features.component.css"]
+  styleUrls: ['./product-features.component.css']
 })
 export class ProductFeaturesComponent implements OnInit {
   @Input() product: IProducts;
