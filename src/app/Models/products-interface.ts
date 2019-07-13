@@ -8,13 +8,7 @@ export interface IProducts {
   description: string;
   features: string[];
   body: string[];
-  styles: [
-    {
-      id: number;
-      color: string;
-      image: string;
-    }
-  ];
+  styles: IProductStyle[];
 }
 
 export interface IProductStyle {
