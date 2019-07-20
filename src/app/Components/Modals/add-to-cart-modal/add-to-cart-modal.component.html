@@ -1,0 +1,18 @@
+<div class="flex-column-row">
+  <h3>Your Cart: {{ totalItems }} items</h3>
+  <p *ngIf="totalItems === 0; else itemSelected">
+    Youre shopping cart is currently empty.
+  </p>
+  <ng-template #itemSelected>
+    <h5>Your Item</h5>
+  </ng-template>
+  <div class="divider"></div>
+  <strong>Sign-in to your account </strong>
+  <div style="margin-top: 1rem;" class="flex-container-row">
+    <div class="flex-column-row">
+      <strong>New Customer?</strong>
+      <strong class="create-account">Create an Account</strong>
+    </div>
+    <button class="sign-up">Sign In</button>
+  </div>
+</div>

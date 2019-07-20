@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Router } from '@angular/router';
-import { SelectedProductService } from '../selected-product.service';
+import { SelectedProductService } from '../../../../Services/selected-product.service';
 
 @Component({
   selector: 'app-add-coverage-modal',

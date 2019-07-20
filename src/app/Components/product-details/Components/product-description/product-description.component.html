@@ -1,9 +1,8 @@
 <div class="grid-container">
   <div class="page-body">
     <div>
-      <img class="image" [src]="product.image" />
+      <img class="image" [src]="!productImage ? product.image : productImage" />
     </div>
-
     <div class="product-description-container">
       <div class="product-description">
         <h2>Product Description</h2>
@@ -45,7 +44,7 @@
           <div class="choose-style">
             <div
               [ngClass]="style.color"
-              (mouseover)="setImageContainerClass($event, style.color)"
+              (mouseover)="setImageContainerClass($event, style.color, style.image)"
               class="img-container"
               *ngFor="let style of productStyles"
               :key="style.color"
@@ -68,7 +67,7 @@
 
     <div class="checkout-component">
       <div class="center-content">
-        <p style="border: 1px solid gray;">
+        <p class="border-container">
           Have Questions 888-553-1105 Call our experts for product info and
           phone-only specials. <a href="#"> Or click here to chat now</a>
         </p>
@@ -78,10 +77,11 @@
           [product]="product"
           [selectedStyle]="selectedStyle"
           (errorMessage)="getErrorMessage($event)"
+          [isThereAnError]="isThereAnError"
         ></app-add-to-cart>
       </div>
       <div class="center-content">
-        <p style="border: 1px solid gray;">
+        <p class="border-container">
           Free Store Pick Up: Available Today Location: Jacksonville, FL View
           More Stores For Availability
         </p>

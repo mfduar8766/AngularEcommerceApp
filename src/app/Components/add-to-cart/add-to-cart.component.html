@@ -2,14 +2,8 @@
   <h3>
     <strong> Price: {{ product.price | currency }}</strong>
   </h3>
-
   <div class="flex-container-column">
-    <form
-      #addToCartForm="ngForm"
-      class="flex-container-row"
-      novalidate
-      (ngSubmit)="addToCart(addToCartForm)"
-    >
+    <form #addToCartForm="ngForm" class="flex-container-row" novalidate>
       <input
         #quantity="ngModel"
         required
@@ -30,18 +24,18 @@
       <button
         [disabled]="
           !quantity.valid ||
-          ((quantity.touched && selectedStyle === '') ||
-            isThereAnError === true)
+          isThereAnError === true ||
+          (quantity.invalid || (quantity.touched && selectedStyle === ''))
         "
         [ngClass]="{
           'is-disabled':
             !quantity.valid ||
-            ((quantity.touched && selectedStyle === '') ||
-              isThereAnError === true)
+            isThereAnError === true ||
+            (quantity.invalid || (quantity.touched && selectedStyle === ''))
         }"
         type="submit"
         class="add-to-cart"
-        (click)="isStyleSelected($event, quantity.untouched)"
+        (click)="addToCart($event)"
       >
         Add To Cart
       </button>

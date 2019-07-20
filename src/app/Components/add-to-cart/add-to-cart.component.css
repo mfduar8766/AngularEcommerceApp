@@ -50,7 +50,7 @@
 }
 
 .is-disabled {
-  cursor: pointer;
+  cursor:not-allowed;
   padding: 1rem;
   color: white;
   font-size: 20px;

@@ -1,0 +1,26 @@
+.create-account:hover {
+  color: red;
+}
+
+.create-account:hover {
+  text-decoration: underline;
+  color: red;
+  cursor: pointer;
+}
+
+.divider {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid gray;
+  height: 1rem;
+  width: 200px;
+}
+
+.sign-up {
+  margin-left: 1rem;
+  width: 150px;
+  text-align: center;
+  padding: 0.5rem;
+  background: red;
+  color: white;
+  cursor: pointer;
+}

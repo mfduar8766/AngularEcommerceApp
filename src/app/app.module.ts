@@ -19,21 +19,25 @@ import { AddToCartComponent } from './Components/add-to-cart/add-to-cart.compone
 import { ProductFeaturesComponent } from './Components/product-details/Components/product-features/product-features.component';
 import { ProductDescriptionComponent } from './Components/product-details/Components/product-description/product-description.component';
 import { RecomendedProductsComponent } from './Components/product-details/Components/recomended-products/recomended-products.component';
-import { AddCoverageModalComponent } from './Components/product-details/Modals/add-coverage-modal/add-coverage-modal.component';
 import { SearchBarComponent } from './Components/search-bar/search-bar.component';
 
-// Material UI Imports
+// Modals
+import { AddCoverageModalComponent } from './Components/product-details/Modals/add-coverage-modal/add-coverage-modal.component';
+import { AddToCartModalComponent } from './Components/Modals/add-to-cart-modal/add-to-cart-modal.component';
+
+// Angular Material Imports
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 // Services Imports
 import { ProductsService } from './Services/products-service.service';
 import { RecomendedProductsService } from './Services/recomended-products.service';
-import { SelectedProductService } from './Components/product-details/Modals/selected-product.service';
+import { SelectedProductService } from './Services/selected-product.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,8 @@ import { SelectedProductService } from './Components/product-details/Modals/sele
     ProductDescriptionComponent,
     RecomendedProductsComponent,
     AddCoverageModalComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    AddToCartModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +66,7 @@ import { SelectedProductService } from './Components/product-details/Modals/sele
     MatMenuModule,
     MatListModule,
     MatDialogModule,
+    MatButtonModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule
@@ -71,6 +77,6 @@ import { SelectedProductService } from './Components/product-details/Modals/sele
     SelectedProductService
   ],
   bootstrap: [AppComponent],
-  entryComponents: [AddCoverageModalComponent]
+  entryComponents: [AddCoverageModalComponent, AddToCartModalComponent]
 })
 export class AppModule {}

@@ -1,0 +1,22 @@
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.fa-search {
+  height: 2rem;
+  width: 5rem;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+}
+
+.fa-search:hover {
+  cursor: pointer;
+}
+
+.search-box {
+  height: 2rem;
+  width: 50%;
+}
