@@ -9,8 +9,12 @@
     <li class="nav-link">
       <a (click)="goToCart()" class="fa fa-cart-plus">
         Cart ({{ totalItems }})
-        <span class="fa fa-caret-down"></span>
       </a>
+      <span
+        (click)="toggleAddToCartModal($event)"
+        style="margin-left: 1rem;"
+        class="fa fa-caret-down"
+      ></span>
     </li>
   </ul>
 </nav>

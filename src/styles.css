@@ -1,8 +1,10 @@
-html,
+@import "font-awesome/css/font-awesome.css";
+
 body {
   height: 100%;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -14,6 +16,8 @@ body {
 
 .image {
   width: 100%;
+  background-size: cover;
+  box-sizing: border-box;
 }
 
 .flex-container-row {
@@ -26,7 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
 }
 
 .button {
@@ -49,4 +53,9 @@ body {
   color: white;
   font-size: 20px;
   background: red;
+}
+
+.border-container {
+  border: 1px solid gray;
+  padding: 1rem;
 }

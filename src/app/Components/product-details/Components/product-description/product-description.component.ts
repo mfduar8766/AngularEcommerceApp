@@ -16,6 +16,8 @@ export class ProductDescriptionComponent implements OnInit {
   public selectedProduct: string = '';
   public errorMessage: string = '';
   public selectedStyle: string = '';
+  public isThereAnError: boolean = false;
+  public productImage: string = '';
 
   constructor() {}
 
@@ -33,15 +35,17 @@ export class ProductDescriptionComponent implements OnInit {
     return (this.secondHalfOfProductDescription = secondHalfOfString);
   }
 
-  setImageContainerClass(event: Event, productColor: string) {
+  setImageContainerClass(event: Event, productColor: string, image: string) {
     if (event.type === 'mouseover') {
       this.selectedProduct = productColor;
+      this.productImage = image;
       const classes = {
         'img-container:hover': productColor
       };
       return classes;
     } else if (event.type === 'mouseout') {
       this.selectedProduct = '';
+      this.productImage = '';
       const classes = {
         'img-container': productColor
       };
@@ -50,12 +54,15 @@ export class ProductDescriptionComponent implements OnInit {
   }
 
   getErrorMessage(message: string) {
+    this.isThereAnError = true;
     return (this.errorMessage = message);
   }
 
   setProductStyle(event: Event, style: string) {
     if (event.type === 'click') {
-      return (this.selectedStyle = style);
+      this.selectedStyle = style;
+      this.isThereAnError = false;
+      return this.selectedStyle;
     }
   }
 }

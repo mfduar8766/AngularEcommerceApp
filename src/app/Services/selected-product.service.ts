@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { IProductDetails } from 'src/app/Models/products-interface';
+import { IProductDetails } from '../Models/products-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class SelectedProductService {
 
   constructor() {}
 
-  sendProductDetails(product: IProductDetails) {
+  public sendProductDetails(product: IProductDetails) {
     this.selectedProductSource.next(product);
   }
 }

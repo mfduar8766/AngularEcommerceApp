@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SelectedProductService } from './selected-product.service';
+import { SelectedProductService } from '../../../Services/selected-product.service';
 
 describe('SelectedProductService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

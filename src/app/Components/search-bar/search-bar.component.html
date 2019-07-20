@@ -1,1 +1,20 @@
-<p>search-bar works!</p>
+<div class="flex-container-row">
+  <img
+    style="padding-left:1rem; padding-top:1rem; width:50px; margin-right: 1rem;"
+    src="../../../assets//img//GC.png"
+    alt="logo"
+  />
+  <div class="input-container">
+    <input
+      #searchQuery
+      name="searchQuery"
+      class="search-box"
+      type="search"
+      placeholder="Enter keywords, item#, or catalog #"
+    />
+    <span
+      (click)="getSearchQuery(searchQuery.value)"
+      class="fa fa-search"
+    ></span>
+  </div>
+</div>
