@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SelectedProductService } from '../../Services/selected-product.service';
 import { IProductDetails } from 'src/app/Models/products-interface';
+import { ProductsStore } from '../../Store/ProductsStore/products.store';
 
 @Component({
   selector: 'app-checkout-page',
@@ -9,12 +9,11 @@ import { IProductDetails } from 'src/app/Models/products-interface';
 })
 export class CheckoutPageComponent implements OnInit {
   public product: IProductDetails;
-  constructor(private selectedProduct: SelectedProductService) {}
+  constructor(
+    private _store: ProductsStore
+  ) {}
 
   ngOnInit() {
-    this.selectedProduct.selectedProduct$.subscribe(data => {
-      this.product = data;
-      console.log(this.product);
-    });
+    this._store.state$.subscribe(state => console.log(state.products));
   }
 }

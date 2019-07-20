@@ -11,11 +11,11 @@ export class AddToCartModalComponent implements OnInit {
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public dialogData: any,
-    private dialogRef: MatDialogRef<AddToCartModalComponent>
+    private _dialogRef: MatDialogRef<AddToCartModalComponent>
   ) {}
 
   ngOnInit() {
-    this.dialogRef.updatePosition({ top: '50px', right: '50px' });
+    this._dialogRef.updatePosition({ top: '50px', right: '50px' });
     const { totalItems } = this.dialogData;
     this.totalItems = totalItems;
   }
