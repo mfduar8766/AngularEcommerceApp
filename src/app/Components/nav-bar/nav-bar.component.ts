@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogConfig } from '@angular/material';
-import { SelectedProductService } from '../../Services/selected-product.service';
 import { AddToCartModalComponent } from '../Modals/add-to-cart-modal/add-to-cart-modal.component';
+import { ProductsStore } from '../../Store/ProductsStore/products.store';
 
 @Component({
   selector: 'app-nav-bar',
@@ -13,29 +13,27 @@ export class NavBarComponent implements OnInit {
   public totalItems: number = 0;
 
   constructor(
-    private router: Router,
-    private selectedProduct: SelectedProductService,
-    private dialog: MatDialog
+    private _router: Router,
+    private _dialog: MatDialog,
+    private _store: ProductsStore
   ) {}
 
   ngOnInit() {
-    this.selectedProduct.selectedProduct$.subscribe(data => {
-      const myArray = [];
-      myArray.push(data);
-      this.totalItems = myArray.length;
+    this._store.state$.subscribe(state => {
+      this.totalItems = state.products.length;
     });
   }
 
   goToHomePage() {
-    this.router.navigate(['']);
+    this._router.navigate(['']);
   }
 
   goToCart() {
-    this.router.navigate(['checkout']);
+    this._router.navigate(['checkout']);
   }
 
   goToServices() {
-    this.router.navigate(['services']);
+    this._router.navigate(['services']);
   }
 
   configureModal() {
@@ -51,9 +49,9 @@ export class NavBarComponent implements OnInit {
   toggleAddToCartModal(event: Event) {
     const dialogConfig = this.configureModal();
     if (event.type === 'click') {
-      this.dialog.open(AddToCartModalComponent, dialogConfig);
+      this._dialog.open(AddToCartModalComponent, dialogConfig);
     } else if (event.type === 'click') {
-      this.dialog.getDialogById('addToCart').close();
+      this._dialog.getDialogById('addToCart').close();
     }
   }
 }

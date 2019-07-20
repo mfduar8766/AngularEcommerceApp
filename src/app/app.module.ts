@@ -37,7 +37,9 @@ import { MatButtonModule } from '@angular/material/button';
 // Services Imports
 import { ProductsService } from './Services/products-service.service';
 import { RecomendedProductsService } from './Services/recomended-products.service';
-import { SelectedProductService } from './Services/selected-product.service';
+
+// Products Store
+import { ProductsStore } from './Store/ProductsStore/products.store';
 
 @NgModule({
   declarations: [
@@ -74,7 +76,7 @@ import { SelectedProductService } from './Services/selected-product.service';
   providers: [
     ProductsService,
     RecomendedProductsService,
-    SelectedProductService
+    ProductsStore
   ],
   bootstrap: [AppComponent],
   entryComponents: [AddCoverageModalComponent, AddToCartModalComponent]

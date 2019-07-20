@@ -17,7 +17,7 @@ export class AddToCartComponent implements OnInit {
   public productQuantity: number = 1;
   public setErrorMessage: string = ' Please choose a quantity.';
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private _dialog: MatDialog) {}
 
   ngOnInit() {}
 
@@ -54,7 +54,7 @@ export class AddToCartComponent implements OnInit {
 
   openModal(product: IProductDetails[]) {
     const dialogConfig = this.configureDialog(product);
-    const dialogRef = this.dialog.open(AddCoverageModalComponent, dialogConfig);
+    const dialogRef = this._dialog.open(AddCoverageModalComponent, dialogConfig);
     dialogRef.afterClosed().subscribe(data => data);
   }
 

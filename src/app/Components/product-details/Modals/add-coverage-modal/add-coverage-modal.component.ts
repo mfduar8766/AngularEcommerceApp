@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Router } from '@angular/router';
-import { SelectedProductService } from '../../../../Services/selected-product.service';
+import { ProductsStore } from '../../../../Store/ProductsStore/products.store';
 
 @Component({
   selector: 'app-add-coverage-modal',
@@ -13,17 +13,17 @@ export class AddCoverageModalComponent implements OnInit {
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public dialogData,
-    private dialogRef: MatDialogRef<AddCoverageModalComponent>,
-    private router: Router,
-    private selectedProduct: SelectedProductService
+    private _dialogRef: MatDialogRef<AddCoverageModalComponent>,
+    private _router: Router,
+    private _store: ProductsStore
   ) {}
 
   ngOnInit() {}
 
   closeModal() {
-    this.selectedProduct.sendProductDetails(this.dialogData);
+    this._store.addProducts(this.dialogData);
     this.isNotInterested = true;
-    this.dialogRef.close(this.isNotInterested);
-    this.router.navigate(['checkout']);
+    this._dialogRef.close(this.isNotInterested);
+    this._router.navigate(['checkout']);
   }
 }

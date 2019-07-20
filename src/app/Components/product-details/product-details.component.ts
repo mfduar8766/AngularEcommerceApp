@@ -16,23 +16,23 @@ export class ProductDetailsComponent implements OnInit {
   public productStyles: IProductStyle[];
 
   constructor(
-    private productsService: ProductsService,
-    private route: ActivatedRoute,
-    private recomededProducts: RecomendedProductsService
+    private _productsService: ProductsService,
+    private _route: ActivatedRoute,
+    private _recomededProducts: RecomendedProductsService
   ) {}
 
   ngOnInit() {
-    this.route.params.subscribe(({ id }) => {
+    this._route.params.subscribe(({ id }) => {
       const parsedID = parseInt(id);
       this.getProductDetails(parsedID);
     });
-    this.recomededProducts.getRecomendedProducts().subscribe(product => {
+    this._recomededProducts.getRecomendedProducts().subscribe(product => {
       return (this.recomendedProductsData = product);
     });
   }
 
   getProductDetails(id: number) {
-    this.productsService.getProducts().subscribe(product => {
+    this._productsService.getProducts().subscribe(product => {
       const filterProducts = product.filter(item => {
         if (item.id === id) {
           return item;
