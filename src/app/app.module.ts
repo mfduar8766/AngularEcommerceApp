@@ -40,6 +40,7 @@ import { RecomendedProductsService } from './Services/recomended-products.servic
 
 // Products Store
 import { ProductsStore } from './Store/ProductsStore/products.store';
+import { UserStore } from './Store/UserStore/user.store';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { ProductsStore } from './Store/ProductsStore/products.store';
   providers: [
     ProductsService,
     RecomendedProductsService,
-    ProductsStore
+    ProductsStore,
+    UserStore
   ],
   bootstrap: [AppComponent],
   entryComponents: [AddCoverageModalComponent, AddToCartModalComponent]

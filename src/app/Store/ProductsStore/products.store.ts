@@ -19,7 +19,7 @@ export class ProductsStore extends Store<ProductsState> {
   addProducts(product: IProductDetails): void {
     this.setState({
       ...this.state,
-      products: [...this.state.purchasedProducts, product]
+      purchasedProducts: [...this.state.purchasedProducts, product]
     });
   }
 }
