@@ -7,7 +7,7 @@ import { IProducts } from 'src/app/Models/products-interface';
     <div class="features-container">
       <h1>Features</h1>
       <ul *ngFor="let features of productFeatures">
-        <li>{{ features }}</li>
+        <li class="features">{{ features }}</li>
       </ul>
       <h1>Specifications</h1>
       <ul *ngFor="let bodyDetails of productBodyDetails">

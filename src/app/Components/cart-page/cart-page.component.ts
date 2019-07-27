@@ -7,11 +7,9 @@ import { IProducts } from 'src/app/Models/products-interface';
   styleUrls: ['./cart-page.component.css']
 })
 export class CartPageComponent implements OnInit {
+  @Input() public product: IProducts;
 
-  @Input() product: IProducts;
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
-
 }

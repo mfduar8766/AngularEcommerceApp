@@ -1,13 +1,13 @@
   <mat-card class="card">
     <mat-card-content>
-      <a [routerLink]="['products', product.id]"
+      <a class="img-link" [routerLink]="['products', product.id]"
         ><img mat-card-image class="images" [src]="product.image"
       /></a>
-      <a [routerLink]="['products', product.id]">
+      <a class="img-name" [routerLink]="['products', product.id]">
         <mat-card-title class="card-title">{{ product.name }}</mat-card-title>
       </a>
     </mat-card-content>
-    <mat-card-subtitle style="color: red; font-size: 20px;">{{
+    <mat-card-subtitle class="price">{{
         product.price | currency
       }}</mat-card-subtitle>
   </mat-card>

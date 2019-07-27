@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent implements OnInit {
+  public serarchQuery: string = '';
   constructor() {}
 
   ngOnInit() {}
 
-  public getSearchQuery(searchQuery: string) {
-    console.log(searchQuery);
+  getSearchQuery(searchQuery: string) {
+    this.serarchQuery = searchQuery;
   }
 }

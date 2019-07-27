@@ -23,6 +23,7 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit() {
     this._route.params.subscribe(({ id }) => {
+      // tslint:disable-next-line:radix
       const parsedID = parseInt(id);
       this.getProductDetails(parsedID);
     });
