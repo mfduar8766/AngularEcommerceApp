@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { RecomendedProductsComponent } from './recomended-products.component';
 
@@ -8,9 +9,8 @@ describe('RecomendedProductsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RecomendedProductsComponent ]
-    })
-    .compileComponents();
+      declarations: [RecomendedProductsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('RecomendedProductsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should render.', () => {
     expect(component).toBeTruthy();
   });
 });

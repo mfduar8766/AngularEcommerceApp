@@ -1,25 +1,25 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddToCartModalComponent } from './add-to-cart-modal.component';
+// import { AddToCartModalComponent } from './add-to-cart-modal.component';
 
-describe('AddToCartModalComponent', () => {
-  let component: AddToCartModalComponent;
-  let fixture: ComponentFixture<AddToCartModalComponent>;
+// describe('AddToCartModalComponent', () => {
+//   let component: AddToCartModalComponent;
+//   let fixture: ComponentFixture<AddToCartModalComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ AddToCartModalComponent ]
-    })
-    .compileComponents();
-  }));
+//   beforeEach(async(() => {
+//     TestBed.configureTestingModule({
+//       declarations: [ AddToCartModalComponent ]
+//     })
+//     .compileComponents();
+//   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(AddToCartModalComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//   beforeEach(() => {
+//     fixture = TestBed.createComponent(AddToCartModalComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });
