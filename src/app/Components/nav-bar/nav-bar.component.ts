@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { AddToCartModalComponent } from '../Modals/add-to-cart-modal/add-to-cart-modal.component';
-import { ProductsStore } from '../../Store/ProductsStore/products.store';
+import { UserStore } from '../../Store/UserStore/user.store';
 
 @Component({
   selector: 'app-nav-bar',
@@ -15,12 +15,12 @@ export class NavBarComponent implements OnInit {
   constructor(
     private _router: Router,
     private _dialog: MatDialog,
-    private _store: ProductsStore
+    private _store: UserStore
   ) {}
 
   ngOnInit() {
     this._store.state$.subscribe(state => {
-      this.totalItems = state.products.length;
+      this.totalItems = state.user.purchasedProducts.length;
     });
   }
 

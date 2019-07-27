@@ -43,7 +43,7 @@ export class AddToCartComponent implements OnInit {
     }
   }
 
-  configureDialog(product: IProductDetails[]) {
+  configureDialog(product: IProductDetails) {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.height = '500px';
     dialogConfig.width = '600px';
@@ -52,7 +52,7 @@ export class AddToCartComponent implements OnInit {
     return dialogConfig;
   }
 
-  openModal(product: IProductDetails[]) {
+  openModal(product: IProductDetails) {
     const dialogConfig = this.configureDialog(product);
     const dialogRef = this._dialog.open(AddCoverageModalComponent, dialogConfig);
     dialogRef.afterClosed().subscribe(data => data);
@@ -60,15 +60,14 @@ export class AddToCartComponent implements OnInit {
 
   createProduct() {
     const { name, price, itemNumber, id } = this.product;
-    const chosenProduct: IProductDetails[] = [
+    const chosenProduct: IProductDetails =
       {
         id,
         itemNumber,
         name,
         price,
         style: this.selectedStyle !== '' ? this.selectedStyle : null
-      }
-    ];
+      };
     return chosenProduct;
   }
 

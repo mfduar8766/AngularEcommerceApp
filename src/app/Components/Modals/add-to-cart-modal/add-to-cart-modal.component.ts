@@ -15,7 +15,7 @@ export class AddToCartModalComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this._dialogRef.updatePosition({ top: '50px', right: '50px' });
+    this._dialogRef.updatePosition({ top: '120px', right: '50px' });
     const { totalItems } = this.dialogData;
     this.totalItems = totalItems;
   }
