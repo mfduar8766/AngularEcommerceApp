@@ -1,0 +1,41 @@
+<div class="landing-page-container">
+  <div class="landing-page-logo">
+    <ng-container *ngFor="let image of arrayOfImages; index as imageIndex">
+      <ng-container [ngSwitch]="currentIndex">
+        <div class="image-container" *ngSwitchCase="imageIndex">
+          <button
+            (click)="goToPreviousImage($event)"
+            class="cheron-icons fa fa-chevron-left"
+          ></button>
+          <img style="width: 50%;" [src]="image" alt="metallica-logo" />
+          <button
+            (click)="goToNextImage($event)"
+            class="cheron-icons fa fa-chevron-right"
+          ></button>
+        </div>
+        <ng-container *ngSwitchDefault></ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+  <div class="promotions">
+    <app-common-card
+      [productData]="productData"
+      [header]="true"
+      [promotionalSlogan]="true"
+      [cardBody]="true"
+    ></app-common-card>
+    <app-common-card
+      [productData]="productData"
+      [footer]="true"
+      [footerTitle]="footerTitle"
+      [footerSubTitle]="footerSubTitle"
+    ></app-common-card>
+    <app-common-card
+      [productData]="productData"
+      [footer]="true"
+      [footerTitle]="footerTitle"
+      [footerSubTitle]="footerSubTitle"
+    ></app-common-card>
+  </div>
+  <div class="featured-products">FEATURED PRODUCTS</div>
+</div>
