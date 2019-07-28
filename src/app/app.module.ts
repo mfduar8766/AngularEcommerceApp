@@ -1,21 +1,16 @@
 // Default Angular Imports
+import { AppRoutingModule, AppRoutes } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
 
 // App Component Imports
 import { AppComponent } from './app.component';
-import { CartPageComponent } from './Components/cart-page/cart-page.component';
-import { CheckoutPageComponent } from './Components/checkout-page/checkout-page.component';
-import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
-import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
-import { ProductsPageComponent } from './Components/products-page/products-page.component';
-import { ProductDetailsComponent } from './Components/product-details/product-details.component';
-import { ServicesPageComponent } from './Components/services-page/services-page.component';
 import { AddToCartComponent } from './Components/add-to-cart/add-to-cart.component';
+import { CardComponent } from './Components/commonComponents/Card/card.component';
+import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { ProductFeaturesComponent } from './Components/product-details/Components/product-features/product-features.component';
 import { ProductDescriptionComponent } from './Components/product-details/Components/product-description/product-description.component';
 import { RecomendedProductsComponent } from './Components/product-details/Components/recomended-products/recomended-products.component';
@@ -45,20 +40,16 @@ import { UserStore } from './Store/UserStore/user.store';
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsPageComponent,
-    CartPageComponent,
-    CheckoutPageComponent,
+    AppRoutes,
+    CardComponent,
     NavBarComponent,
-    PageNotFoundComponent,
-    ServicesPageComponent,
-    ProductDetailsComponent,
     AddToCartComponent,
     ProductFeaturesComponent,
     ProductDescriptionComponent,
     RecomendedProductsComponent,
     AddCoverageModalComponent,
     SearchBarComponent,
-    AddToCartModalComponent,
+    AddToCartModalComponent
   ],
   imports: [
     BrowserModule,

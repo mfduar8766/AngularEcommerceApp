@@ -1,0 +1,43 @@
+<div *ngFor="let productDetails of productData" class="card-container">
+  <div class="card-header" *ngIf="header">
+    <img
+      class="image-logo"
+      [src]="productDetails.image"
+      [alt]="productDetails.altText"
+    />
+    <h1>{{ productDetails.title }}</h1>
+    <h5 *ngIf="promotionalSlogan">{{ productDetails.promotionalData }}</h5>
+  </div>
+  <div *ngIf="cardBody; else cardImageBody" class="card-body">
+    <h2 class="product-name">{{ productDetails.productName }}</h2>
+    <div class="flex-container-row">
+      <img
+        [src]="productDetails.productImage"
+        [alt]="productDetails.productImageAltText"
+      />
+      <div class="flex-column-row">
+        <h1 class="product-price">
+          {{ productDetails.discountPrice | currency }}
+        </h1>
+        <div class="saving-container">
+          Save {{ productDetails.savings | currency }}
+        </div>
+        <h2 class="regular-price">Regular Price:</h2>
+        <h1 class="original-price">
+          {{ productDetails.originalPrice | currency }}
+        </h1>
+      </div>
+    </div>
+  </div>
+  <ng-template class="card-image-body" #cardImageBody>
+    <img
+      style="width:40%;"
+      [src]="productDetails.productImage"
+      [alt]="productDetails.productImageAltText"
+    />
+  </ng-template>
+  <footer class="footer-container" *ngIf="footer">
+    <h1>{{ footerTitle }}</h1>
+    <h2 class="footer-sub-title">{{ footerSubTitle }}</h2>
+  </footer>
+</div>
