@@ -1,0 +1,71 @@
+<footer class="footer-container">
+  <div>
+    <div *ngIf="thankYouMessage === null; else formSigned" class="signin-form">
+      <h2 class="font-thickness">
+        Be the first to know about exclusive offers, tips and more.
+      </h2>
+      <div class="input-field">
+        <input
+          #userEmail
+          style="width: 500px; height: 40px;"
+          [class]="errorMessage && !userEmail.value ? 'error-message' : null"
+          type="email"
+          name="userEmail"
+          placeholder="Enter Email Address (Required)"
+        />
+        <button
+          (click)="signUp($event, userEmail.value)"
+          type="submit"
+          class="sigin-button"
+        >
+          Sign Up
+        </button>
+      </div>
+      <span style="font-size: 15px; color: red;" *ngIf="errorMessage">{{
+        errorMessage
+      }}</span>
+    </div>
+    <ng-template class="signed-form" #formSigned>
+      <p *ngIf="thankYouMessage !== null">{{ thankYouMessage }}</p>
+    </ng-template>
+  </div>
+  <div class="features-accounts">
+    <div class="flex-column-row">
+      <h1 class="font-thickness">Your Account</h1>
+      <ul>
+        <li class="font-styles">Order History</li>
+        <li class="font-styles">Returns</li>
+        <li class="font-styles">Wish List</li>
+        <li class="font-styles">Email Preferences</li>
+        <li class="font-styles">Business Accounts</li>
+      </ul>
+    </div>
+    <div class="flex-column-row">
+      <h1 class="font-thickness">Features</h1>
+      <ul>
+        <li class="font-styles">Rebates</li>
+        <li class="font-styles">Layaway</li>
+        <li class="font-styles">Donations</li>
+        <li class="font-styles">Pro Coverage</li>
+        <li class="font-styles">Affiliate Program</li>
+        <li class="font-styles">Press Room</li>
+      </ul>
+    </div>
+    <div class="flex-column-row">
+      <h1 class="font-thickness">Suppert</h1>
+      <ul>
+        <li class="font-styles">Service & Support</li>
+        <li class="font-styles">About</li>
+        <li class="font-styles">Careers</li>
+        <li class="font-styles">Site Map</li>
+        <li class="font-styles">Locations</li>
+        <li class="font-styles">Accessibility Statement</li>
+        <li class="font-styles">Mobile Site</li>
+      </ul>
+    </div>
+    <div class="feed-back-container">
+      <h1 class="font-thickness">How Are We Doing</h1>
+      <button class="feedback">Provide Feedback</button>
+    </div>
+  </div>
+</footer>

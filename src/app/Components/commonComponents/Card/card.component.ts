@@ -10,6 +10,7 @@ export class CardComponent implements OnInit {
   @Input() public footer: boolean = false;
   @Input() public cardBody: boolean = false;
   @Input() public promotionalSlogan: boolean = false;
+  @Input() public borderRight: boolean = false;
   @Input() public footerTitle: string = null;
   @Input() public footerSubTitle: string = null;
   @Input() public productData: any = null;
