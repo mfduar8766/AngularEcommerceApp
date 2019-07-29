@@ -28,6 +28,11 @@
   width: 10%;
 }
 
+.promotionalSlogan {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
 .card-body {
   display: flex;
   flex-direction: column;

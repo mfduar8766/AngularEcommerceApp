@@ -25,6 +25,10 @@
   margin: 1rem;
 }
 
+.border-right {
+  border-right: 1px solid black;
+}
+
 .image-container {
   display: flex;
   align-items: center;
@@ -35,7 +39,7 @@
   box-sizing: content-box;
 }
 
-.cheron-icons {
+.chevron-icons {
   text-align: center;
   color: white;
   background: black;
@@ -43,6 +47,11 @@
   padding: 0.5rem;
   font-size: 4rem;
   border: none;
+  opacity: 0.5;
+}
+
+.chevron-icons:hover {
+  opacity: 1;
 }
 
 .featured-products {

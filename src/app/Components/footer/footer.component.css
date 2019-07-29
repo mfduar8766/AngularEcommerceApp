@@ -1,0 +1,83 @@
+.footer-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1rem;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: lightgray;
+}
+
+.features-accounts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: lightgray;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sigin-button {
+  padding: 1rem;
+  color: white;
+  background: red;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.error-message {
+  border: 1px solid red;
+  background: rgb(182, 96, 96);
+}
+
+.signed-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.font-styles {
+  font-weight: 100;
+  list-style-type: none;
+}
+
+.font-styles:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.font-thickness {
+  font-weight: 600;
+}
+
+.feed-back-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback {
+  padding: 1rem;
+  border: 1px solid black;
+  font-weight: 100;
+  color: black;
+  background: lightgray;
+  cursor: pointer;
+}

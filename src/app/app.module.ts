@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AddToCartComponent } from './Components/add-to-cart/add-to-cart.component';
 import { CardComponent } from './Components/commonComponents/Card/card.component';
+import { FooterComponent } from './Components/footer/footer.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { ProductFeaturesComponent } from './Components/product-details/Components/product-features/product-features.component';
 import { ProductDescriptionComponent } from './Components/product-details/Components/product-description/product-description.component';
@@ -33,7 +34,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ProductsService } from './Services/products-service.service';
 import { RecomendedProductsService } from './Services/recomended-products.service';
 
-// Products Store
+// Store Imports
 import { ProductsStore } from './Store/ProductsStore/products.store';
 import { UserStore } from './Store/UserStore/user.store';
 
@@ -42,6 +43,7 @@ import { UserStore } from './Store/UserStore/user.store';
     AppComponent,
     AppRoutes,
     CardComponent,
+    FooterComponent,
     NavBarComponent,
     AddToCartComponent,
     ProductFeaturesComponent,

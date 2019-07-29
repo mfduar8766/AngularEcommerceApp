@@ -6,7 +6,9 @@
       [alt]="productDetails.altText"
     />
     <h1>{{ productDetails.title }}</h1>
-    <h5 *ngIf="promotionalSlogan">{{ productDetails.promotionalData }}</h5>
+    <h5 class="promotionalSlogan" *ngIf="promotionalSlogan">
+      {{ productDetails.promotionalData }}
+    </h5>
   </div>
   <div *ngIf="cardBody; else cardImageBody" class="card-body">
     <h2 class="product-name">{{ productDetails.productName }}</h2>
