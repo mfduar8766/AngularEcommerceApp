@@ -43,6 +43,10 @@
   box-sizing: content-box;
 }
 
+.card-image {
+  width: 40%;
+}
+
 .product-name {
   font-weight: 300;
   color: gray;

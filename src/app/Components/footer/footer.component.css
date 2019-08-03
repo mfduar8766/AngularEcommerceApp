@@ -31,7 +31,7 @@
   justify-content: center;
 }
 
-.sigin-button {
+.signin-button {
   padding: 1rem;
   color: white;
   background: red;
@@ -42,6 +42,11 @@
 .error-message {
   border: 1px solid red;
   background: rgb(182, 96, 96);
+}
+
+.error-message-display {
+  font-size: 15px;
+  color: red;
 }
 
 .signed-form {

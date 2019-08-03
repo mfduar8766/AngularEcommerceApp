@@ -29,6 +29,10 @@
   border-right: 1px solid black;
 }
 
+.carousel-image {
+  width: 50%;
+}
+
 .image-container {
   display: flex;
   align-items: center;

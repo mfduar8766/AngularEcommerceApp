@@ -16,12 +16,12 @@
         <button
           (click)="signUp($event, userEmail.value)"
           type="submit"
-          class="sigin-button"
+          class="signin-button"
         >
           Sign Up
         </button>
       </div>
-      <span style="font-size: 15px; color: red;" *ngIf="errorMessage">{{
+      <span class="error-message-display" *ngIf="errorMessage">{{
         errorMessage
       }}</span>
     </div>

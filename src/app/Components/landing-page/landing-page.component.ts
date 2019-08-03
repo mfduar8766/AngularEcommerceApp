@@ -8,8 +8,9 @@ import { CarouselImages } from './CarouselImages';
 })
 export class LandingPageComponent implements OnInit {
   public currentIndex: number = 0;
-  public Carousel: CarouselImages = new CarouselImages();
+  public carouselImages: CarouselImages = new CarouselImages();
   public arrayOfImages: string[] = [];
+  public header: boolean = true;
   public footerTitle: string = 'New Arrivals';
   public footerSubTitle: string =
     'Fender Vintage Series and other hot products.';
@@ -31,7 +32,7 @@ export class LandingPageComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    const carouselValues: string[] = Object.values(this.Carousel);
+    const carouselValues: string[] = Object.values(this.carouselImages);
     carouselValues.forEach(item => this.arrayOfImages.push(item));
   }
 
